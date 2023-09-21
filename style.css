@@ -41,7 +41,7 @@ h1{
 .links{
   color: hsl(0deg 0% 37%);
   display: flex;
-  justify-content: center;
+  justify-content: space-evenly;
 }
 
 .title{
