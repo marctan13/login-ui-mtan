@@ -5,36 +5,45 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- /* needed for airbnb font */ -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet"> 
+    <!-- /* needed for facebook and twitter icons */ -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>Login UI Project</title>
 </head>
 <body>
     <main>
-        <div class="bg-image">
+        <div>
             <div class="container">
-                <h1>A1RBNB</h1>
+                <h1>a1rbnb</h1>
                 <form class='form'>
                     <h2 class="title">Sign In</h2>
                     <div class="field">
-                        <label for="fname">User Name:</label><br>
-                        <input type="text" required placeholder="Email or Username" id="fname" name="fname"><br>
-                    </div>
-                    <div class="field">
-                        <label for="lname">Password:</label><br>
-                        <input type="password" required id="lname" placeholder="Password" name="lname">
-                        <div class="show">
-                            <input type="button" value="show">
+                        <div class="block">
+                            <label for="user">User Name:</label>
+                            <input type="text" required placeholder="Email or Username" id="user" name="user">
+                        </div>
+                        <div class="block">
+                            <label for="pass">Password:</label>
+                            <input type="password" required id="pass" placeholder="Password" name="pass">
                         </div>
                     </div>
-                    <div class="password">
-                        <a href="#">Forgot Password</a>
+                    <div class="show-pw" class="block">
+                        <input type="checkbox" onclick="myFunction()">Show Password
                     </div>
-                    <div class="field">
-                        <input type="submit" value="submit">
+                    <div class="submit">
+                        <input type="submit" style="cursor:pointer" value="submit">
+                    </div>
+                    <div class="links">
+                        <a href="#">Sign up</a>
+                        <a href="#">Forgot Password?</a>
                     </div>
                 </form>
                 <hr>
-                <div class="login">Social Links</div>
-                <div class="link">
+                <div class="socials">Please follow us on social media.</div>
+                <div class="soclinks">
                     <a href="https://www.facebook.com/airbnb/" class="fa fa-facebook"></a>
                     <a href="https://twitter.com/Airbnb?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor" class="fa fa-twitter"></a>
                 </div>
@@ -44,5 +53,17 @@
         </footer>
         </div>
     </main>
+
+    <script>
+        function myFunction() {
+          var x = document.getElementById("pass");
+          if (x.type === "password") {
+            x.type = "text";
+          } else {
+            x.type = "password";
+          }
+        }
+    </script>
+
 </body>
 </html>
